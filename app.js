@@ -38,14 +38,14 @@ app.post('/', (req, res) => {
         });
 
 
-    // client.messages
-    // .create({
-    //     body: 'Hello Driver.',
-    //     from: twilio_number,
-    //     to: num_two
-    // })
-    // .then(message => console.log(message.sid))
-    // .catch(error => console.log(error));
+    client.messages
+    .create({
+        body: 'Hello Driver!',
+        from: twilio_number,
+        to: num_two
+    })
+    .then(message => console.log(message.sid))
+    .catch(error => console.log(error));
 })
 
 const PORT = process.env.PORT || 3000;
